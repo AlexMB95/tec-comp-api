@@ -34,7 +34,7 @@ const signUp = async (user_name, email, pass, date_birth, address) => {
     }
 
 
-    // En caso de no existir, inserta usuario a la base de datos
+    // En caso de no existir, inserta usuario a la base de datos 
     if (duplicateUser?.length === 0) {
         try {
             const result = await Dal.query("INSERT INTO users (user_name, email, pass, date_birth, address) VALUES (?, ?, ?, ?, ?)",
@@ -54,7 +54,7 @@ const signUp = async (user_name, email, pass, date_birth, address) => {
             };
             status = 200;
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             response = {
                 message: error.message,
                 data: null,

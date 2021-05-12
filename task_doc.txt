@@ -1,0 +1,37 @@
+Services
+-   addTask (GET)
+        Agregaros{
+            INSER INTO tasks(
+            id_task
+            title
+            description
+            date
+                start
+                end
+            status
+            id_user ← Para a qué usuario está asignada la tarea
+            ) 
+            VALUES (?, ?, ?, ?, ?, ?)
+        }
+-   updateTask (PUT)
+        Actualiza tarea  
+        parametros{
+            UPDATE tasks SET title = ?, description = ?, date_task = ?, id_user = ?
+            WHERE title = ?
+        }      
+-   deleteTask (DELETE)
+        Elimina tarea
+        parametros{
+            DELETE FROM tasks WHERE title = ?
+        }
+-   completeTaskList 
+        Muestra lista tareas completadas
+        parametros{
+            SELECT * FROM tasks WHERE status = complete
+        }
+-   viewTask
+        Muestra lista de tareas
+        parametros{ tareas a la lista
+        paramet
+            SELECT *  FROM tasks
+        }

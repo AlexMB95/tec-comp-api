@@ -1,5 +1,5 @@
 /**
- * Este script levanta el servidor e importa ocmponentes.
+ * Este script levanta el servidor e importa componentes.
  */
 require("dotenv").config();
 const express = require("express");

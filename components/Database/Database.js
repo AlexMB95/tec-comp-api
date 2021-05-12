@@ -1,5 +1,5 @@
 /**
- * 
+ * Se crea la conexión a la base de datos.
  */
 const mysql = require("mysql2/promise");
 const databaseConfig = require("./databaseConfig");

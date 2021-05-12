@@ -9,7 +9,7 @@ const utils = {
     /**
      * Esta función se encarga de encriptar un string
      * @param {String} password Constraseñña a encriptar
-     * @param {String} Constraseñña encriptada
+     * @returns {String} Constraseña encriptada
      */
     hashPassword: (password) =>
         bcrypt.hashSync(password, parseInt(process.env.COST_FACTOR)),

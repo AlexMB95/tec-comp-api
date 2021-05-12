@@ -24,12 +24,11 @@ User.get("/all", async (req, res) =>{
     } catch (error) {
         res.status(500).json({
             message: error,
-        });
-        
+        });   
     }
     });
 */
-
+//Rutas para cada servicio
 User.post("/sign-up", async (req, res) => {
     console.log(req.body);
     let { user_name, email, pass, date_birth, address } = req.body;
