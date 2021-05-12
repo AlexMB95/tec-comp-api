@@ -6,6 +6,7 @@ const express = require("express");
 const cors = require("cors");
 const Database = require("./components/Database/Database");
 const User = require("./components/User/User");
+const Task = require("./components/Task/Task");
 //const { query } = require("./components/Database/Database");
 
 
@@ -36,6 +37,7 @@ app.get("/", async(req, res) => {
 */
 //  Registro de componentes.
 app.use("/usuarios", User.api);
+app.use("/tareas", Task.api);
 
 //  Levanta servidor
 app.listen(3000, () => {
